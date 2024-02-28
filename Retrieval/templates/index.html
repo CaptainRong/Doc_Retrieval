@@ -1,69 +1,7 @@
+{% extends 'layout.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Webpixels">
-    <title>Doc_Retrieval</title>
-    <!-- Preloader -->
-    <style>
-        @keyframes hidePreloader {
-            0% {
-                width: 100%;
-                height: 100%;
-            }
-
-            100% {
-                width: 0;
-                height: 0;
-            }
-        }
-
-        body>div.preloader {
-            position: fixed;
-            background: white;
-            width: 100%;
-            height: 100%;
-            z-index: 1071;
-            opacity: 0;
-            transition: opacity .5s ease;
-            overflow: hidden;
-            pointer-events: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        body:not(.loaded)>div.preloader {
-            opacity: 1;
-        }
-
-        body:not(.loaded) {
-            overflow: hidden;
-        }
-
-        body.loaded>div.preloader {
-            animation: hidePreloader .5s linear .5s forwards;
-        }
-    </style>
-    <script>
-        window.addEventListener("load", function() {
-            setTimeout(function() {
-                document.querySelector('body').classList.add('loaded');
-            }, 300);
-        });
-    </script>
-    <!-- Favicon -->
-    <link rel="icon" href="{% static 'img/index/brand/favicon.png' %}" type="image/png"><!-- Font Awesome -->
-    <link rel="stylesheet" href="{% static 'plugins/libs/@fortawesome/fontawesome-free/css/all.min.css' %}">
-    <!-- Quick CSS -->
-    <link rel="stylesheet" href="{% static 'css/quick-website.css' %}" id="stylesheet">
-</head>
-
-<body>
+{% block content %}
     <!-- Preloader -->
     <div class="preloader">
         <div class="spinner-border text-primary" role="status">
@@ -88,7 +26,7 @@
     <!-- Go Pro -->
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar nac vbar-expand-lg navbar-light bg-white">
         <div class="container">
             <!-- Brand -->
             <a class="navbar-brand" href="/index/">
@@ -137,21 +75,23 @@
                 <div class="col-12 col-md-5 col-lg-6 order-md-2 text-center">
                     <!-- Image -->
                     <figure class="w-100">
-                        <img alt="Image placeholder" src="assets/img/svg/illustrations/illustration-3.svg" class="img-fluid mw-md-120">
+                        <!-- assets/img/svg/illustrations/illustration-3.svg-->
+                        <img alt="Image placeholder" src="{% static 'img/index/svg/illustrations/illustration-3.svg' %}" class="img-fluid mw-md-120">
                     </figure>
                 </div>
                 <div class="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5">
                     <!-- Heading -->
                     <h1 class="display-4 text-center text-md-left mb-3">
-                        It's time to amplify your <strong class="text-primary">online business</strong>
+                        <!-- Hello, -->
+                        <strong class="text-primary">{{ title }}</strong>
                     </h1>
                     <!-- Text -->
                     <p class="lead text-center text-md-left text-muted">
-                        Build a beautiful, modern website with flexible Bootstrap components built from scratch.
+                        Try to use
                     </p>
                     <!-- Buttons -->
                     <div class="text-center text-md-left mt-5">
-                        <a href="https://webpixels.io/themes/quick-free-bootstrap-theme" class="btn btn-primary btn-icon" target="_blank">
+                        <a href="/chat/" class="btn btn-primary btn-icon" target="_blank">
                             <span class="btn-inner--text">Get started</span>
                             <span class="btn-inner--icon"><i data-feather="chevron-right"></i></span>
                         </a>
@@ -786,6 +726,4 @@
             'height': '1em'
         })
     </script>
-</body>
-
-</html>
+{% endblock %}
