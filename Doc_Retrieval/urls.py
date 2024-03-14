@@ -14,14 +14,20 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# from django.contrib import admin
 from django.contrib import admin
-from django.urls import path
-from Retrieval.views import index,chat
+from django.urls import re_path, include
 
+# remain to use...
+# router = routers.DefaultRouter()
+# router.register(r'users', views.UserViewSet)
+# router.register(r'groups', views.GroupViewSet)
+
+# 使用自动URL路由连接我们的API。
+# 另外，我们还包括支持浏览器浏览API的登录URL。
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('index/', index),
-    path('main/', chat),
-
-
+    re_path('admin/', admin.site.urls),
+    re_path('v1/', include('Retrieval.urls')),
 ]
+# path('index/', index),
+# path('main/', chat),
