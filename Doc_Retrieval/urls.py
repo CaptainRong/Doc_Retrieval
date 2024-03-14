@@ -28,6 +28,7 @@ from django.urls import re_path, include
 urlpatterns = [
     re_path('admin/', admin.site.urls),
     re_path('v1/', include('Retrieval.urls')),
+    re_path('index', include('Retrieval.urls')),
 ]
 # path('index/', index),
 # path('main/', chat),

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.http import Http404
@@ -64,7 +64,7 @@ def index(request):
         'title': '科技文献大模型',
 
     }
-    return render(request, 'index.html', data)
+    return render(request, 'mmmm.html', data)
 
 
 def chat(request):
@@ -73,3 +73,7 @@ def chat(request):
     }
 
     return render(request, 'main.html', context)
+
+
+def chat_part(request):
+    return render(request, 'main.html')
