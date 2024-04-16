@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>
+        AI研究领域新闻
+    </title>
+    <script src="https://registry.npmmirror.com/vue/3.3.11/files/dist/vue.global.js">
+    </script>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;display=swap"
+          rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div class="bg-gray-100" id="app">
+    <div class="container mx-auto px-4">
+        <header class="flex justify-between items-center py-4">
+            <div class="flex items-center">
+                <img alt="AI Research News Logo" class="mr-6" height="30"
+                     src="{% static 'img/fav.jpg' %}"
+                     width="100"/>
+                <ul class="flex space-x-4">
+                    <li>
+                        <a class="text-blue-600 font-medium" href="#">
+                            首页
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600 font-medium" href="#">
+                            新闻
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600 font-medium" href="#">
+                            论文
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600 font-medium" href="#">
+                            关于
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600 font-medium" href="#">
+                            指南
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600 font-medium" href="#">
+                            
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center">
+                <a class="text-blue-600 font-medium" href="/index/chat_part">
+                    科技文献检索大模型
+                </a>
+                <div class="flex items-center bg-white px-4 py-2 rounded-full shadow-md mr-4">
+                    <i class="fas fa-search text-gray-400 mr-2">
+                    </i>
+                    <input class="outline-none" placeholder="搜索" type="text"/>
+                </div>
+                <a class="text-blue-600 font-medium" href="#">
+                    登录
+                </a>
+            </div>
+        </header>
+        <main class="flex mt-6">
+            <section class="w-3/4 bg-white rounded-lg shadow-md p-6 mr-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">
+                    头条
+                </h2>
+                <div class="flex items-center mb-6">
+                    <img alt="Featured Article Image" class="rounded-lg mr-4" height="120"
+                         src="https://dalleprodsec.blob.core.windows.net/private/images/0a4e25a5-1b81-4bc0-9449-3d9227ae22d0/generated_00.png?se=2024-03-15T14%3A34%3A12Z&amp;sig=v0iZ25buJrP9%2FA9WnuiTSj0rVWwLzp9gg2TRCYviuz8%3D&amp;ske=2024-03-19T11%3A08%3A03Z&amp;skoid=e52d5ed7-0657-4f62-bc12-7e5dbb260a96&amp;sks=b&amp;skt=2024-03-12T11%3A08%3A03Z&amp;sktid=33e01921-4d64-4f8c-a055-5bdaffd5e33d&amp;skv=2020-10-02&amp;sp=r&amp;spr=https&amp;sr=b&amp;sv=2020-10-02"
+                         width="200"/>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                            【新闻】| 人工智能领域的最新研究进展
+                        </h3>
+                        <p class="text-sm text-gray-600">
+                            本周在人工智能领域，有多项新的研究成果发布。其中，XXX大学的研究团队在YYY项目上取得了重要进展。
+                        </p>
+                    </div>
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mb-4">
+                    最新研究
+                </h2>
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                        A Survey on Language Models for Code
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-2">
+                        The software industry continuously evolves as new technologies and practices emerge. With the
+                        growing complexity in code, the automation, and AI-based tools in software development have
+                        gained significant attention. In this paper, we survey existing language models that are
+                        specifically designed for code...
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500">
+        <span>
+         Oct 5, 2023
+        </span>
+                        <span class="mx-2">
+         ·
+        </span>
+                        <span>
+         5 min read
+        </span>
+                        <span class="mx-2">
+         ·
+        </span>
+                        <span>
+         1234 views
+        </span>
+                    </div>
+                </div>
+                <!-- Repeat for each news item -->
+            </section>
+            <aside class="w-1/4">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">
+                        热门研究
+                    </h2>
+                    <!-- Repeat for each popular research item -->
+                    <div class="flex items-center mb-4">
+                        <img alt="Popular Research Thumbnail" class="rounded-full mr-4" height="60"
+                             src="https://dalleprodsec.blob.core.windows.net/private/images/0d67aa7b-b6e7-4300-a06d-6ae3512574ac/generated_00.png?se=2024-03-15T14%3A34%3A12Z&amp;sig=gtQMFL6brrqyZHfo9EBA9qMW74PtmGcj8uIjRv9eLcg%3D&amp;ske=2024-03-19T12%3A56%3A57Z&amp;skoid=e52d5ed7-0657-4f62-bc12-7e5dbb260a96&amp;sks=b&amp;skt=2024-03-12T12%3A56%3A57Z&amp;sktid=33e01921-4d64-4f8c-a055-5bdaffd5e33d&amp;skv=2020-10-02&amp;sp=r&amp;spr=https&amp;sr=b&amp;sv=2020-10-02"
+                             width="60"/>
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-800">
+                                AI Miner AI MICROSERVICES
+                            </h3>
+                            <p class="text-xs text-gray-500">
+                                AI 2000 大会 TOP 2000
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Repeat for each popular research item -->
+                </div>
+            </aside>
+        </main>
+    </div>
+</div>
+<script>
+    const {createApp, ref} = Vue
+    createApp({
+        setup() {
+            const message = ref('Hello vue!')
+            return {
+                message
+            }
+        }
+    }).mount('#app')
+</script>
+</body>
+</html>
